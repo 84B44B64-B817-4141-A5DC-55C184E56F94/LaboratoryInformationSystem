@@ -38,7 +38,6 @@ namespace LIS
             }
             else
             {
-                MessageBox.Show("Access granted.", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmMain main = new frmMain();
                 main.lbl_username.Text = txtUsername.Text;
                 main.Show();

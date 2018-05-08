@@ -23,8 +23,25 @@ namespace LIS
 
         private void addNewPatientDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddPatient add = new frmAddPatient();
-            add.ShowDialog();
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is frmAddPatient)
+                {
+                    if (MessageBox.Show("Open another patient form?","System",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        frmAddPatient add = new frmAddPatient();
+                        add.Show();
+                        return;
+                    }
+                    else
+                    {
+                        f.Focus();
+                        return;
+                    }
+                }
+            }
+            frmAddPatient addd = new frmAddPatient();
+            addd.Show();
         }
 
         private void frmMain_Load(object sender, EventArgs e)

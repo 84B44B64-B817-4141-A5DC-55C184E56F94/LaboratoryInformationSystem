@@ -73,7 +73,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // patientsDataToolStripMenuItem
@@ -88,14 +88,15 @@
             // addNewPatientDataToolStripMenuItem
             // 
             this.addNewPatientDataToolStripMenuItem.Name = "addNewPatientDataToolStripMenuItem";
-            this.addNewPatientDataToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.addNewPatientDataToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.addNewPatientDataToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.addNewPatientDataToolStripMenuItem.Text = "&Add New Patient Data";
             this.addNewPatientDataToolStripMenuItem.Click += new System.EventHandler(this.addNewPatientDataToolStripMenuItem_Click);
             // 
             // viewPreviousPatientDataToolStripMenuItem
             // 
             this.viewPreviousPatientDataToolStripMenuItem.Name = "viewPreviousPatientDataToolStripMenuItem";
-            this.viewPreviousPatientDataToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.viewPreviousPatientDataToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.viewPreviousPatientDataToolStripMenuItem.Text = "&View Previous Patient Data";
             // 
             // testToolStripMenuItem
