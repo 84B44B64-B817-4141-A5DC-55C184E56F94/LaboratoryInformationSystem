@@ -150,7 +150,7 @@ namespace LIS
                 e.Handled = true;
             }
         }
-
+        //For Ctrl+A, Ctrl+C, Ctrl+X, Ctrl+V keyboard commands over filtered textboxes
         private void txtUsername_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.A)

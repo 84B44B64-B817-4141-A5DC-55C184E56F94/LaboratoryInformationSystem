@@ -12,6 +12,7 @@ namespace LIS
         [STAThread]
         static void Main()
         {
+            //For Creating only one instance of the program
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             using (Mutex mutex = new Mutex(false, "Global\\" + appGuid))
@@ -31,6 +32,7 @@ namespace LIS
         static string read;
         public static MySqlConnection Connect()
         {
+            //For MySQL Server IP Checking
             string line;
             StreamReader file = new StreamReader("config.ini");
             while ((line = file.ReadLine()) != null)
@@ -62,6 +64,7 @@ namespace LIS
             catch { }
             return Connection;
         }
+        //For MySQL Commands SELECT, INSERT, UPDATE, DELETE
         public static MySqlDataReader Query(string Text)
         {
             try
@@ -78,6 +81,7 @@ namespace LIS
                 return null;
             }
         }
+        //For Audit Trail
         public static void AuditTrail(string activity, string username, string workgroup, string databasename)
         {
             string actdate = DateTime.Now.ToString("yyyy-MM-dd"), acttime = DateTime.Now.ToString("HH:mm:ss");

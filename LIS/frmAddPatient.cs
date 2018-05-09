@@ -29,13 +29,21 @@ namespace LIS
 
         private void dtpBirthday_ValueChanged(object sender, EventArgs e)
         {
-            var today = DateTime.Today;
-            var age = today.Year - dtpBirthday.Value.Year;
-            if (dtpBirthday.Value > today.AddYears(-age))
+            if (dtpBirthday.Value > DateTime.Now)
             {
-                age--;
+                MessageBox.Show("Birthdate cannot be more than the date today.", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtpBirthday.Value = DateTime.Now;
             }
-            txtAge.Text = age.ToString();
+            else
+            {
+                var today = DateTime.Today;
+                var age = today.Year - dtpBirthday.Value.Year;
+                if (dtpBirthday.Value > today.AddYears(-age))
+                {
+                    age--;
+                }
+                txtAge.Text = age.ToString();
+            }
         }
 
         private void radMobile_CheckedChanged(object sender, EventArgs e)
@@ -92,7 +100,7 @@ namespace LIS
 
         private void chkFBS_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -104,7 +112,7 @@ namespace LIS
 
         private void chkBUN_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -116,7 +124,7 @@ namespace LIS
 
         private void chkCreatinine_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -128,7 +136,7 @@ namespace LIS
 
         private void chkUric_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -140,7 +148,7 @@ namespace LIS
 
         private void chkChole_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -152,7 +160,7 @@ namespace LIS
 
         private void chkTrigly_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -164,7 +172,7 @@ namespace LIS
 
         private void chkHDL_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -176,7 +184,7 @@ namespace LIS
 
         private void chkSgpt_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -188,7 +196,7 @@ namespace LIS
 
         private void chkSgot_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -200,7 +208,7 @@ namespace LIS
 
         private void chkECG_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -212,7 +220,7 @@ namespace LIS
 
         private void chkCBC_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -224,7 +232,7 @@ namespace LIS
 
         private void chkPlatelet_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -236,7 +244,7 @@ namespace LIS
 
         private void chkUrinalysis_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -248,7 +256,7 @@ namespace LIS
 
         private void chk2hrPPBS_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -260,7 +268,7 @@ namespace LIS
 
         private void chkHBAIC_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -272,7 +280,7 @@ namespace LIS
 
         private void chkSodium_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -284,7 +292,7 @@ namespace LIS
 
         private void chkPotassium_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -296,7 +304,7 @@ namespace LIS
 
         private void chkHbsag_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -308,7 +316,7 @@ namespace LIS
 
         private void chkFecalysis_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBAIC.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
+            if (chk2hrPPBS.CheckState == CheckState.Unchecked && chkBUN.CheckState == CheckState.Unchecked && chkCBC.CheckState == CheckState.Unchecked && chkChole.CheckState == CheckState.Unchecked && chkCreatinine.CheckState == CheckState.Unchecked && chkECG.CheckState == CheckState.Unchecked && chkFBS.CheckState == CheckState.Unchecked && chkFecalysis.CheckState == CheckState.Unchecked && chkHBA1C.CheckState == CheckState.Unchecked && chkHbsag.CheckState == CheckState.Unchecked && chkHDL.CheckState == CheckState.Unchecked && chkPlatelet.CheckState == CheckState.Unchecked && chkPotassium.CheckState == CheckState.Unchecked && chkSgot.CheckState == CheckState.Unchecked && chkSgpt.CheckState == CheckState.Unchecked && chkSodium.CheckState == CheckState.Unchecked && chkTrigly.CheckState == CheckState.Unchecked && chkUric.CheckState == CheckState.Unchecked && chkUrinalysis.CheckState == CheckState.Unchecked)
             {
                 grbPrint.Enabled = false;
             }
@@ -320,7 +328,7 @@ namespace LIS
 
         private void txtLastname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && (!(e.KeyChar == (char)Keys.Back)))
+            if (!char.IsLetter(e.KeyChar) && (!(e.KeyChar == (char)Keys.Back)) && (!(e.KeyChar == (char)Keys.Space)))
             {
                 e.Handled = true;
             }
@@ -332,7 +340,7 @@ namespace LIS
 
         private void txtFirstname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && (!(e.KeyChar == (char)Keys.Back)))
+            if (!char.IsLetter(e.KeyChar) && (!(e.KeyChar == (char)Keys.Back)) && (!(e.KeyChar == (char)Keys.Space)))
             {
                 e.Handled = true;
             }
@@ -402,9 +410,9 @@ namespace LIS
             }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPhysician_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && (!(e.KeyChar == (char)Keys.Back)))
+            if (!char.IsLetter(e.KeyChar) && (!(e.KeyChar == (char)Keys.Back)) && (!(e.KeyChar == (char)Keys.Space)))
             {
                 e.Handled = true;
             }
@@ -416,12 +424,88 @@ namespace LIS
 
         private void frmAddPatient_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (txtFirstname.Text.Trim() != "" || txtLastname.Text.Trim() != "" || txtMidname.Text.Trim() != "" || txtSuffix.Text.Trim() != "" || cboCity.SelectedIndex != -1 || cboGender.SelectedIndex != -1 || cboProvince.SelectedIndex != -1 || txtAge.Text.Trim() != "" || chk2hrPPBS.CheckState != CheckState.Unchecked && chkBUN.CheckState != CheckState.Unchecked && chkCBC.CheckState != CheckState.Unchecked && chkChole.CheckState != CheckState.Unchecked && chkCreatinine.CheckState != CheckState.Unchecked && chkECG.CheckState != CheckState.Unchecked && chkFBS.CheckState != CheckState.Unchecked && chkFecalysis.CheckState != CheckState.Unchecked && chkHBAIC.CheckState != CheckState.Unchecked && chkHbsag.CheckState != CheckState.Unchecked && chkHDL.CheckState != CheckState.Unchecked && chkPlatelet.CheckState != CheckState.Unchecked && chkPotassium.CheckState != CheckState.Unchecked && chkSgot.CheckState != CheckState.Unchecked && chkSgpt.CheckState != CheckState.Unchecked && chkSodium.CheckState != CheckState.Unchecked && chkTrigly.CheckState != CheckState.Unchecked && chkUric.CheckState != CheckState.Unchecked && chkUrinalysis.CheckState != CheckState.Unchecked)
+            if (txtFirstname.Text.Trim() != "" || txtLastname.Text.Trim() != "" || txtMidname.Text.Trim() != "" || txtSuffix.Text.Trim() != "" || cboCity.SelectedIndex != -1 || cboGender.SelectedIndex != -1 || cboProvince.SelectedIndex != -1 || txtAge.Text.Trim() != "" || chk2hrPPBS.CheckState != CheckState.Unchecked && chkBUN.CheckState != CheckState.Unchecked && chkCBC.CheckState != CheckState.Unchecked && chkChole.CheckState != CheckState.Unchecked && chkCreatinine.CheckState != CheckState.Unchecked && chkECG.CheckState != CheckState.Unchecked && chkFBS.CheckState != CheckState.Unchecked && chkFecalysis.CheckState != CheckState.Unchecked && chkHBA1C.CheckState != CheckState.Unchecked && chkHbsag.CheckState != CheckState.Unchecked && chkHDL.CheckState != CheckState.Unchecked && chkPlatelet.CheckState != CheckState.Unchecked && chkPotassium.CheckState != CheckState.Unchecked && chkSgot.CheckState != CheckState.Unchecked && chkSgpt.CheckState != CheckState.Unchecked && chkSodium.CheckState != CheckState.Unchecked && chkTrigly.CheckState != CheckState.Unchecked && chkUric.CheckState != CheckState.Unchecked && chkUrinalysis.CheckState != CheckState.Unchecked)
             {
                 if (MessageBox.Show("Input details are already present. Continue closing form?","System",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.Cancel)
                 {
                     e.Cancel = true;
                 }
+            }
+        }
+
+        private void chkXray_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkXray.CheckState == CheckState.Checked)
+            {
+                grbXray.Enabled = true;
+            }
+            else
+            {
+                chkXray1.CheckState = CheckState.Unchecked;
+                chkXray2.CheckState = CheckState.Unchecked;
+                chkXray3.CheckState = CheckState.Unchecked;
+                chkXray4.CheckState = CheckState.Unchecked;
+                chkXray5.CheckState = CheckState.Unchecked;
+                chkXray6.CheckState = CheckState.Unchecked;
+                chkXray7.CheckState = CheckState.Unchecked;
+                chkXray8.CheckState = CheckState.Unchecked;
+                grbXray.Enabled = false;
+            }
+        }
+
+        private void chkUltrasound_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkUltrasound.CheckState == CheckState.Checked)
+            {
+                grbUltrasound.Enabled = true;
+            }
+            else
+            {
+                chkUltrasound1.CheckState = CheckState.Unchecked;
+                chkUltrasound2.CheckState = CheckState.Unchecked;
+                chkUltrasound3.CheckState = CheckState.Unchecked;
+                chkUltrasound4.CheckState = CheckState.Unchecked;
+                chkUltrasound5.CheckState = CheckState.Unchecked;
+                chkUltrasound6.CheckState = CheckState.Unchecked;
+                chkUltrasound7.CheckState = CheckState.Unchecked;
+                chkUltrasound8.CheckState = CheckState.Unchecked;
+                grbUltrasound.Enabled = false;
+            }
+        }
+
+        private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (!(e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void txtAge_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAge.Text == "-1")
+            {
+                txtAge.Text = "0";
+            }
+        }
+
+        private void cboProvince_Leave(object sender, EventArgs e)
+        {
+            if (cboProvince.Text.Trim() != "")
+            {
+                cboProvince.Text.ToUpper();
+            }
+        }
+
+        private void cboCity_Leave(object sender, EventArgs e)
+        {
+            if (cboCity.Text.Trim() != "")
+            {
+                cboProvince.Text.ToUpper();
             }
         }
     }
