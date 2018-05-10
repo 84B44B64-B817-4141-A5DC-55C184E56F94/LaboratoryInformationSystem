@@ -5,13 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace LIS
 {
     public partial class frmAddPatient : Form
     {
+        Thread loadCity;
+        string[] cityArray;
+        int arrayReference, arrayCounter = 0;
+        string provinceName;
+
         public frmAddPatient()
         {
             InitializeComponent();
@@ -493,20 +499,32 @@ namespace LIS
             }
         }
 
-        private void cboProvince_Leave(object sender, EventArgs e)
+        private void cboProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboProvince.Text.Trim() != "")
-            {
-                cboProvince.Text.ToUpper();
-            }
+            provinceName = cboProvince.Text;
+            cboCity.Items.Clear();
+            loadCity = new Thread(getCity);
+            loadCity.Start();
+            while (loadCity.IsAlive) { }
+            cboCity.Items.AddRange(cityArray);
         }
 
-        private void cboCity_Leave(object sender, EventArgs e)
+        //For loading the cities/municipalities on selected province
+        void getCity()
         {
-            if (cboCity.Text.Trim() != "")
+            arrayReference = Program.Count("SELECT COUNT( `" + provinceName + "`) from lis.tbl_city");
+            cityArray = new string[arrayReference];
+            MySqlDataReader fetchCity = Program.Query("SELECT `" + provinceName + "` from lis.tbl_city");
+            arrayCounter = 0;
+            while (fetchCity.Read())
             {
-                cboProvince.Text.ToUpper();
+                if (arrayCounter != arrayReference)
+                {
+                    cityArray[arrayCounter] = fetchCity.GetString(0);
+                    arrayCounter++;
+                }
             }
+            fetchCity.Close();
         }
     }
 }

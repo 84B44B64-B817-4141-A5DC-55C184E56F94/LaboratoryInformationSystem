@@ -81,6 +81,26 @@ namespace LIS
                 return null;
             }
         }
+        //For MySQL Command EXECUTESCALAR
+        public static int Count(string Text)
+        {
+            try
+            {
+                MySqlConnection Connection = Connect();
+                MySqlCommand Command = new MySqlCommand(Text, Connection);
+                Command.Prepare();
+                string getCount  = Command.ExecuteScalar().ToString();
+                int count = int.Parse(getCount);
+                Connection.Close();
+                return count;
+            }
+            catch (MySqlException msex)
+            {
+                MessageBox.Show(msex.Message);
+                return 0;
+            }
+
+        }
         //For Audit Trail
         public static void AuditTrail(string activity, string username, string workgroup, string databasename)
         {

@@ -78,5 +78,11 @@ namespace LIS
         {
             Application.Exit();
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int counter = Program.Count("Select Count( " + "BULACAN" + ") from lis.tbl_city");
+            MessageBox.Show(counter.ToString());
+        }
     }
 }

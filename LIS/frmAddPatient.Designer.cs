@@ -101,23 +101,23 @@
             this.chkBUN = new System.Windows.Forms.CheckBox();
             this.chkFBS = new System.Windows.Forms.CheckBox();
             this.grbXray = new System.Windows.Forms.GroupBox();
-            this.grbUltrasound = new System.Windows.Forms.GroupBox();
-            this.chkXray1 = new System.Windows.Forms.CheckBox();
-            this.chkXray2 = new System.Windows.Forms.CheckBox();
-            this.chkXray3 = new System.Windows.Forms.CheckBox();
-            this.chkXray4 = new System.Windows.Forms.CheckBox();
-            this.chkXray5 = new System.Windows.Forms.CheckBox();
-            this.chkXray6 = new System.Windows.Forms.CheckBox();
-            this.chkXray7 = new System.Windows.Forms.CheckBox();
             this.chkXray8 = new System.Windows.Forms.CheckBox();
-            this.chkUltrasound1 = new System.Windows.Forms.CheckBox();
-            this.chkUltrasound2 = new System.Windows.Forms.CheckBox();
-            this.chkUltrasound3 = new System.Windows.Forms.CheckBox();
-            this.chkUltrasound4 = new System.Windows.Forms.CheckBox();
-            this.chkUltrasound5 = new System.Windows.Forms.CheckBox();
-            this.chkUltrasound6 = new System.Windows.Forms.CheckBox();
-            this.chkUltrasound7 = new System.Windows.Forms.CheckBox();
+            this.chkXray7 = new System.Windows.Forms.CheckBox();
+            this.chkXray6 = new System.Windows.Forms.CheckBox();
+            this.chkXray5 = new System.Windows.Forms.CheckBox();
+            this.chkXray4 = new System.Windows.Forms.CheckBox();
+            this.chkXray3 = new System.Windows.Forms.CheckBox();
+            this.chkXray2 = new System.Windows.Forms.CheckBox();
+            this.chkXray1 = new System.Windows.Forms.CheckBox();
+            this.grbUltrasound = new System.Windows.Forms.GroupBox();
             this.chkUltrasound8 = new System.Windows.Forms.CheckBox();
+            this.chkUltrasound7 = new System.Windows.Forms.CheckBox();
+            this.chkUltrasound6 = new System.Windows.Forms.CheckBox();
+            this.chkUltrasound5 = new System.Windows.Forms.CheckBox();
+            this.chkUltrasound4 = new System.Windows.Forms.CheckBox();
+            this.chkUltrasound3 = new System.Windows.Forms.CheckBox();
+            this.chkUltrasound2 = new System.Windows.Forms.CheckBox();
+            this.chkUltrasound1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.grbExam.SuspendLayout();
             this.grbPrint.SuspendLayout();
@@ -202,17 +202,18 @@
             // 
             // cboCity
             // 
+            this.cboCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCity.FormattingEnabled = true;
             this.cboCity.Location = new System.Drawing.Point(356, 102);
             this.cboCity.Name = "cboCity";
             this.cboCity.Size = new System.Drawing.Size(296, 25);
             this.cboCity.TabIndex = 35;
-            this.cboCity.Leave += new System.EventHandler(this.cboCity_Leave);
             // 
             // cboProvince
             // 
             this.cboProvince.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cboProvince.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProvince.FormattingEnabled = true;
             this.cboProvince.Items.AddRange(new object[] {
             "ABRA",
@@ -299,7 +300,7 @@
             this.cboProvince.Name = "cboProvince";
             this.cboProvince.Size = new System.Drawing.Size(276, 25);
             this.cboProvince.TabIndex = 34;
-            this.cboProvince.Leave += new System.EventHandler(this.cboProvince_Leave);
+            this.cboProvince.SelectedIndexChanged += new System.EventHandler(this.cboProvince_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -1053,6 +1054,94 @@
             this.grbXray.TabIndex = 24;
             this.grbXray.TabStop = false;
             // 
+            // chkXray8
+            // 
+            this.chkXray8.AutoSize = true;
+            this.chkXray8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkXray8.Location = new System.Drawing.Point(144, 102);
+            this.chkXray8.Name = "chkXray8";
+            this.chkXray8.Size = new System.Drawing.Size(91, 25);
+            this.chkXray8.TabIndex = 32;
+            this.chkXray8.Text = "CXR APL";
+            this.chkXray8.UseVisualStyleBackColor = true;
+            // 
+            // chkXray7
+            // 
+            this.chkXray7.AutoSize = true;
+            this.chkXray7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkXray7.Location = new System.Drawing.Point(144, 77);
+            this.chkXray7.Name = "chkXray7";
+            this.chkXray7.Size = new System.Drawing.Size(83, 25);
+            this.chkXray7.TabIndex = 31;
+            this.chkXray7.Text = "CXR PA";
+            this.chkXray7.UseVisualStyleBackColor = true;
+            // 
+            // chkXray6
+            // 
+            this.chkXray6.AutoSize = true;
+            this.chkXray6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkXray6.Location = new System.Drawing.Point(144, 51);
+            this.chkXray6.Name = "chkXray6";
+            this.chkXray6.Size = new System.Drawing.Size(59, 25);
+            this.chkXray6.TabIndex = 30;
+            this.chkXray6.Text = "PNS";
+            this.chkXray6.UseVisualStyleBackColor = true;
+            // 
+            // chkXray5
+            // 
+            this.chkXray5.AutoSize = true;
+            this.chkXray5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkXray5.Location = new System.Drawing.Point(144, 26);
+            this.chkXray5.Name = "chkXray5";
+            this.chkXray5.Size = new System.Drawing.Size(63, 25);
+            this.chkXray5.TabIndex = 29;
+            this.chkXray5.Text = "Skull";
+            this.chkXray5.UseVisualStyleBackColor = true;
+            // 
+            // chkXray4
+            // 
+            this.chkXray4.AutoSize = true;
+            this.chkXray4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkXray4.Location = new System.Drawing.Point(6, 102);
+            this.chkXray4.Name = "chkXray4";
+            this.chkXray4.Size = new System.Drawing.Size(95, 25);
+            this.chkXray4.TabIndex = 28;
+            this.chkXray4.Text = "Shoulder";
+            this.chkXray4.UseVisualStyleBackColor = true;
+            // 
+            // chkXray3
+            // 
+            this.chkXray3.AutoSize = true;
+            this.chkXray3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkXray3.Location = new System.Drawing.Point(6, 77);
+            this.chkXray3.Name = "chkXray3";
+            this.chkXray3.Size = new System.Drawing.Size(131, 25);
+            this.chkXray3.TabIndex = 27;
+            this.chkXray3.Text = "Cervical Spine";
+            this.chkXray3.UseVisualStyleBackColor = true;
+            // 
+            // chkXray2
+            // 
+            this.chkXray2.AutoSize = true;
+            this.chkXray2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkXray2.Location = new System.Drawing.Point(6, 51);
+            this.chkXray2.Name = "chkXray2";
+            this.chkXray2.Size = new System.Drawing.Size(110, 25);
+            this.chkXray2.TabIndex = 26;
+            this.chkXray2.Text = "Extremities";
+            this.chkXray2.UseVisualStyleBackColor = true;
+            // 
+            // chkXray1
+            // 
+            this.chkXray1.AutoSize = true;
+            this.chkXray1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkXray1.Location = new System.Drawing.Point(6, 26);
+            this.chkXray1.Name = "chkXray1";
+            this.chkXray1.Size = new System.Drawing.Size(136, 25);
+            this.chkXray1.TabIndex = 25;
+            this.chkXray1.Text = "Thoracic Spine";
+            this.chkXray1.UseVisualStyleBackColor = true;
+            // 
             // grbUltrasound
             // 
             this.grbUltrasound.Controls.Add(this.chkUltrasound8);
@@ -1070,159 +1159,16 @@
             this.grbUltrasound.TabIndex = 23;
             this.grbUltrasound.TabStop = false;
             // 
-            // chkXray1
+            // chkUltrasound8
             // 
-            this.chkXray1.AutoSize = true;
-            this.chkXray1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkXray1.Location = new System.Drawing.Point(6, 26);
-            this.chkXray1.Name = "chkXray1";
-            this.chkXray1.Size = new System.Drawing.Size(136, 25);
-            this.chkXray1.TabIndex = 25;
-            this.chkXray1.Text = "Thoracic Spine";
-            this.chkXray1.UseVisualStyleBackColor = true;
-            // 
-            // chkXray2
-            // 
-            this.chkXray2.AutoSize = true;
-            this.chkXray2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkXray2.Location = new System.Drawing.Point(6, 51);
-            this.chkXray2.Name = "chkXray2";
-            this.chkXray2.Size = new System.Drawing.Size(110, 25);
-            this.chkXray2.TabIndex = 26;
-            this.chkXray2.Text = "Extremities";
-            this.chkXray2.UseVisualStyleBackColor = true;
-            // 
-            // chkXray3
-            // 
-            this.chkXray3.AutoSize = true;
-            this.chkXray3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkXray3.Location = new System.Drawing.Point(6, 77);
-            this.chkXray3.Name = "chkXray3";
-            this.chkXray3.Size = new System.Drawing.Size(131, 25);
-            this.chkXray3.TabIndex = 27;
-            this.chkXray3.Text = "Cervical Spine";
-            this.chkXray3.UseVisualStyleBackColor = true;
-            // 
-            // chkXray4
-            // 
-            this.chkXray4.AutoSize = true;
-            this.chkXray4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkXray4.Location = new System.Drawing.Point(6, 102);
-            this.chkXray4.Name = "chkXray4";
-            this.chkXray4.Size = new System.Drawing.Size(95, 25);
-            this.chkXray4.TabIndex = 28;
-            this.chkXray4.Text = "Shoulder";
-            this.chkXray4.UseVisualStyleBackColor = true;
-            // 
-            // chkXray5
-            // 
-            this.chkXray5.AutoSize = true;
-            this.chkXray5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkXray5.Location = new System.Drawing.Point(144, 26);
-            this.chkXray5.Name = "chkXray5";
-            this.chkXray5.Size = new System.Drawing.Size(63, 25);
-            this.chkXray5.TabIndex = 29;
-            this.chkXray5.Text = "Skull";
-            this.chkXray5.UseVisualStyleBackColor = true;
-            // 
-            // chkXray6
-            // 
-            this.chkXray6.AutoSize = true;
-            this.chkXray6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkXray6.Location = new System.Drawing.Point(144, 51);
-            this.chkXray6.Name = "chkXray6";
-            this.chkXray6.Size = new System.Drawing.Size(59, 25);
-            this.chkXray6.TabIndex = 30;
-            this.chkXray6.Text = "PNS";
-            this.chkXray6.UseVisualStyleBackColor = true;
-            // 
-            // chkXray7
-            // 
-            this.chkXray7.AutoSize = true;
-            this.chkXray7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkXray7.Location = new System.Drawing.Point(144, 77);
-            this.chkXray7.Name = "chkXray7";
-            this.chkXray7.Size = new System.Drawing.Size(83, 25);
-            this.chkXray7.TabIndex = 31;
-            this.chkXray7.Text = "CXR PA";
-            this.chkXray7.UseVisualStyleBackColor = true;
-            // 
-            // chkXray8
-            // 
-            this.chkXray8.AutoSize = true;
-            this.chkXray8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkXray8.Location = new System.Drawing.Point(144, 102);
-            this.chkXray8.Name = "chkXray8";
-            this.chkXray8.Size = new System.Drawing.Size(91, 25);
-            this.chkXray8.TabIndex = 32;
-            this.chkXray8.Text = "CXR APL";
-            this.chkXray8.UseVisualStyleBackColor = true;
-            // 
-            // chkUltrasound1
-            // 
-            this.chkUltrasound1.AutoSize = true;
-            this.chkUltrasound1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUltrasound1.Location = new System.Drawing.Point(6, 23);
-            this.chkUltrasound1.Name = "chkUltrasound1";
-            this.chkUltrasound1.Size = new System.Drawing.Size(111, 25);
-            this.chkUltrasound1.TabIndex = 33;
-            this.chkUltrasound1.Text = "Whole Abd";
-            this.chkUltrasound1.UseVisualStyleBackColor = true;
-            // 
-            // chkUltrasound2
-            // 
-            this.chkUltrasound2.AutoSize = true;
-            this.chkUltrasound2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUltrasound2.Location = new System.Drawing.Point(6, 47);
-            this.chkUltrasound2.Name = "chkUltrasound2";
-            this.chkUltrasound2.Size = new System.Drawing.Size(110, 25);
-            this.chkUltrasound2.TabIndex = 34;
-            this.chkUltrasound2.Text = "Upper Abd";
-            this.chkUltrasound2.UseVisualStyleBackColor = true;
-            // 
-            // chkUltrasound3
-            // 
-            this.chkUltrasound3.AutoSize = true;
-            this.chkUltrasound3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUltrasound3.Location = new System.Drawing.Point(6, 71);
-            this.chkUltrasound3.Name = "chkUltrasound3";
-            this.chkUltrasound3.Size = new System.Drawing.Size(109, 25);
-            this.chkUltrasound3.TabIndex = 35;
-            this.chkUltrasound3.Text = "Lower Abd";
-            this.chkUltrasound3.UseVisualStyleBackColor = true;
-            // 
-            // chkUltrasound4
-            // 
-            this.chkUltrasound4.AutoSize = true;
-            this.chkUltrasound4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUltrasound4.Location = new System.Drawing.Point(6, 95);
-            this.chkUltrasound4.Name = "chkUltrasound4";
-            this.chkUltrasound4.Size = new System.Drawing.Size(60, 25);
-            this.chkUltrasound4.TabIndex = 36;
-            this.chkUltrasound4.Text = "HBT";
-            this.chkUltrasound4.UseVisualStyleBackColor = true;
-            // 
-            // chkUltrasound5
-            // 
-            this.chkUltrasound5.AutoSize = true;
-            this.chkUltrasound5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUltrasound5.Location = new System.Drawing.Point(144, 23);
-            this.chkUltrasound5.Name = "chkUltrasound5";
-            this.chkUltrasound5.Size = new System.Drawing.Size(60, 25);
-            this.chkUltrasound5.TabIndex = 37;
-            this.chkUltrasound5.Text = "KUB";
-            this.chkUltrasound5.UseVisualStyleBackColor = true;
-            // 
-            // chkUltrasound6
-            // 
-            this.chkUltrasound6.AutoSize = true;
-            this.chkUltrasound6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUltrasound6.Location = new System.Drawing.Point(144, 47);
-            this.chkUltrasound6.Name = "chkUltrasound6";
-            this.chkUltrasound6.Size = new System.Drawing.Size(71, 25);
-            this.chkUltrasound6.TabIndex = 38;
-            this.chkUltrasound6.Text = "Pelvic";
-            this.chkUltrasound6.UseVisualStyleBackColor = true;
+            this.chkUltrasound8.AutoSize = true;
+            this.chkUltrasound8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkUltrasound8.Location = new System.Drawing.Point(144, 95);
+            this.chkUltrasound8.Name = "chkUltrasound8";
+            this.chkUltrasound8.Size = new System.Drawing.Size(75, 25);
+            this.chkUltrasound8.TabIndex = 40;
+            this.chkUltrasound8.Text = "Breast";
+            this.chkUltrasound8.UseVisualStyleBackColor = true;
             // 
             // chkUltrasound7
             // 
@@ -1235,16 +1181,71 @@
             this.chkUltrasound7.Text = "Thyroid";
             this.chkUltrasound7.UseVisualStyleBackColor = true;
             // 
-            // chkUltrasound8
+            // chkUltrasound6
             // 
-            this.chkUltrasound8.AutoSize = true;
-            this.chkUltrasound8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUltrasound8.Location = new System.Drawing.Point(144, 95);
-            this.chkUltrasound8.Name = "chkUltrasound8";
-            this.chkUltrasound8.Size = new System.Drawing.Size(75, 25);
-            this.chkUltrasound8.TabIndex = 40;
-            this.chkUltrasound8.Text = "Breast";
-            this.chkUltrasound8.UseVisualStyleBackColor = true;
+            this.chkUltrasound6.AutoSize = true;
+            this.chkUltrasound6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkUltrasound6.Location = new System.Drawing.Point(144, 47);
+            this.chkUltrasound6.Name = "chkUltrasound6";
+            this.chkUltrasound6.Size = new System.Drawing.Size(71, 25);
+            this.chkUltrasound6.TabIndex = 38;
+            this.chkUltrasound6.Text = "Pelvic";
+            this.chkUltrasound6.UseVisualStyleBackColor = true;
+            // 
+            // chkUltrasound5
+            // 
+            this.chkUltrasound5.AutoSize = true;
+            this.chkUltrasound5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkUltrasound5.Location = new System.Drawing.Point(144, 23);
+            this.chkUltrasound5.Name = "chkUltrasound5";
+            this.chkUltrasound5.Size = new System.Drawing.Size(60, 25);
+            this.chkUltrasound5.TabIndex = 37;
+            this.chkUltrasound5.Text = "KUB";
+            this.chkUltrasound5.UseVisualStyleBackColor = true;
+            // 
+            // chkUltrasound4
+            // 
+            this.chkUltrasound4.AutoSize = true;
+            this.chkUltrasound4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkUltrasound4.Location = new System.Drawing.Point(6, 95);
+            this.chkUltrasound4.Name = "chkUltrasound4";
+            this.chkUltrasound4.Size = new System.Drawing.Size(60, 25);
+            this.chkUltrasound4.TabIndex = 36;
+            this.chkUltrasound4.Text = "HBT";
+            this.chkUltrasound4.UseVisualStyleBackColor = true;
+            // 
+            // chkUltrasound3
+            // 
+            this.chkUltrasound3.AutoSize = true;
+            this.chkUltrasound3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkUltrasound3.Location = new System.Drawing.Point(6, 71);
+            this.chkUltrasound3.Name = "chkUltrasound3";
+            this.chkUltrasound3.Size = new System.Drawing.Size(109, 25);
+            this.chkUltrasound3.TabIndex = 35;
+            this.chkUltrasound3.Text = "Lower Abd";
+            this.chkUltrasound3.UseVisualStyleBackColor = true;
+            // 
+            // chkUltrasound2
+            // 
+            this.chkUltrasound2.AutoSize = true;
+            this.chkUltrasound2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkUltrasound2.Location = new System.Drawing.Point(6, 47);
+            this.chkUltrasound2.Name = "chkUltrasound2";
+            this.chkUltrasound2.Size = new System.Drawing.Size(110, 25);
+            this.chkUltrasound2.TabIndex = 34;
+            this.chkUltrasound2.Text = "Upper Abd";
+            this.chkUltrasound2.UseVisualStyleBackColor = true;
+            // 
+            // chkUltrasound1
+            // 
+            this.chkUltrasound1.AutoSize = true;
+            this.chkUltrasound1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkUltrasound1.Location = new System.Drawing.Point(6, 23);
+            this.chkUltrasound1.Name = "chkUltrasound1";
+            this.chkUltrasound1.Size = new System.Drawing.Size(111, 25);
+            this.chkUltrasound1.TabIndex = 33;
+            this.chkUltrasound1.Text = "Whole Abd";
+            this.chkUltrasound1.UseVisualStyleBackColor = true;
             // 
             // frmAddPatient
             // 
