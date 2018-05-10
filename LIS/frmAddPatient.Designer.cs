@@ -68,9 +68,9 @@
             this.chkDrugTest = new System.Windows.Forms.CheckBox();
             this.grbPrint = new System.Windows.Forms.GroupBox();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.lblGrossTotal = new System.Windows.Forms.Label();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.lblNetTotal = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -118,6 +118,7 @@
             this.chkUltrasound3 = new System.Windows.Forms.CheckBox();
             this.chkUltrasound2 = new System.Windows.Forms.CheckBox();
             this.chkUltrasound1 = new System.Windows.Forms.CheckBox();
+            this.btnPriceCheck = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grbExam.SuspendLayout();
             this.grbPrint.SuspendLayout();
@@ -129,6 +130,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(6, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 17);
@@ -138,6 +140,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(74, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(287, 13);
@@ -183,7 +186,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(835, 286);
+            this.groupBox1.Size = new System.Drawing.Size(835, 271);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient Details";
@@ -207,7 +210,7 @@
             this.cboCity.Location = new System.Drawing.Point(356, 102);
             this.cboCity.Name = "cboCity";
             this.cboCity.Size = new System.Drawing.Size(296, 25);
-            this.cboCity.TabIndex = 35;
+            this.cboCity.TabIndex = 5;
             // 
             // cboProvince
             // 
@@ -270,7 +273,7 @@
             "MOUNTAIN PROVINCE",
             "NEGROS OCCIDENTAL",
             "NEGROS ORIENTAL",
-            "NORTHEN SAMAR",
+            "NORTHERN SAMAR",
             "NUEVA ECIJA",
             "OCCIDENTAL MINDORO",
             "PALAWAN",
@@ -299,7 +302,7 @@
             this.cboProvince.Location = new System.Drawing.Point(74, 102);
             this.cboProvince.Name = "cboProvince";
             this.cboProvince.Size = new System.Drawing.Size(276, 25);
-            this.cboProvince.TabIndex = 34;
+            this.cboProvince.TabIndex = 4;
             this.cboProvince.SelectedIndexChanged += new System.EventHandler(this.cboProvince_SelectedIndexChanged);
             // 
             // label16
@@ -329,7 +332,7 @@
             this.txtContact_3.MaxLength = 4;
             this.txtContact_3.Name = "txtContact_3";
             this.txtContact_3.Size = new System.Drawing.Size(73, 25);
-            this.txtContact_3.TabIndex = 30;
+            this.txtContact_3.TabIndex = 11;
             this.txtContact_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContact_3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContact_3_KeyPress);
             // 
@@ -340,7 +343,7 @@
             this.txtContact_2.MaxLength = 3;
             this.txtContact_2.Name = "txtContact_2";
             this.txtContact_2.Size = new System.Drawing.Size(78, 25);
-            this.txtContact_2.TabIndex = 29;
+            this.txtContact_2.TabIndex = 10;
             this.txtContact_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContact_2.TextChanged += new System.EventHandler(this.txtContact_2_TextChanged);
             this.txtContact_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContact_2_KeyPress);
@@ -352,7 +355,7 @@
             this.txtContact_1.MaxLength = 4;
             this.txtContact_1.Name = "txtContact_1";
             this.txtContact_1.Size = new System.Drawing.Size(75, 25);
-            this.txtContact_1.TabIndex = 28;
+            this.txtContact_1.TabIndex = 9;
             this.txtContact_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContact_1.TextChanged += new System.EventHandler(this.txtContact_1_TextChanged);
             this.txtContact_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContact_1_KeyPress);
@@ -363,7 +366,7 @@
             this.txtPhysician.Location = new System.Drawing.Point(426, 190);
             this.txtPhysician.Name = "txtPhysician";
             this.txtPhysician.Size = new System.Drawing.Size(376, 25);
-            this.txtPhysician.TabIndex = 27;
+            this.txtPhysician.TabIndex = 12;
             this.txtPhysician.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPhysician.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhysician_KeyPress);
             // 
@@ -371,6 +374,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Maroon;
             this.label14.Location = new System.Drawing.Point(356, 193);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(64, 17);
@@ -380,10 +384,10 @@
             // radTelephone
             // 
             this.radTelephone.AutoSize = true;
-            this.radTelephone.Location = new System.Drawing.Point(184, 243);
+            this.radTelephone.Location = new System.Drawing.Point(184, 237);
             this.radTelephone.Name = "radTelephone";
             this.radTelephone.Size = new System.Drawing.Size(87, 21);
-            this.radTelephone.TabIndex = 25;
+            this.radTelephone.TabIndex = 8;
             this.radTelephone.Text = "Telephone";
             this.radTelephone.UseVisualStyleBackColor = true;
             this.radTelephone.CheckedChanged += new System.EventHandler(this.radTelephone_CheckedChanged);
@@ -391,10 +395,10 @@
             // radMobile
             // 
             this.radMobile.AutoSize = true;
-            this.radMobile.Location = new System.Drawing.Point(74, 243);
+            this.radMobile.Location = new System.Drawing.Point(74, 237);
             this.radMobile.Name = "radMobile";
             this.radMobile.Size = new System.Drawing.Size(67, 21);
-            this.radMobile.TabIndex = 24;
+            this.radMobile.TabIndex = 8;
             this.radMobile.Text = "Mobile";
             this.radMobile.UseVisualStyleBackColor = true;
             this.radMobile.CheckedChanged += new System.EventHandler(this.radMobile_CheckedChanged);
@@ -403,6 +407,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Maroon;
             this.label13.Location = new System.Drawing.Point(6, 193);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 17);
@@ -416,14 +421,15 @@
             this.dtpBirthday.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(243, 25);
-            this.dtpBirthday.TabIndex = 21;
+            this.dtpBirthday.TabIndex = 6;
             this.dtpBirthday.ValueChanged += new System.EventHandler(this.dtpBirthday_ValueChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(10, 158);
+            this.label12.ForeColor = System.Drawing.Color.Maroon;
+            this.label12.Location = new System.Drawing.Point(6, 158);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 17);
             this.label12.TabIndex = 20;
@@ -442,12 +448,13 @@
             this.cboGender.Location = new System.Drawing.Point(591, 152);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(154, 25);
-            this.cboGender.TabIndex = 19;
+            this.cboGender.TabIndex = 7;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Maroon;
             this.label11.Location = new System.Drawing.Point(530, 158);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 17);
@@ -458,6 +465,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Maroon;
             this.label10.Location = new System.Drawing.Point(356, 158);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(32, 17);
@@ -480,13 +488,14 @@
             this.txtSuffix.Location = new System.Drawing.Point(735, 58);
             this.txtSuffix.Name = "txtSuffix";
             this.txtSuffix.Size = new System.Drawing.Size(67, 25);
-            this.txtSuffix.TabIndex = 14;
+            this.txtSuffix.TabIndex = 3;
             this.txtSuffix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSuffix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSuffix_KeyPress);
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Maroon;
             this.label8.Location = new System.Drawing.Point(356, 130);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(285, 13);
@@ -497,6 +506,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Maroon;
             this.label7.Location = new System.Drawing.Point(74, 130);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(276, 13);
@@ -516,6 +526,7 @@
             // 
             // dtpNew
             // 
+            this.dtpNew.Enabled = false;
             this.dtpNew.Location = new System.Drawing.Point(74, 27);
             this.dtpNew.Name = "dtpNew";
             this.dtpNew.Size = new System.Drawing.Size(243, 25);
@@ -525,6 +536,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Maroon;
             this.label5.Location = new System.Drawing.Point(6, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
@@ -544,6 +556,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Maroon;
             this.label3.Location = new System.Drawing.Point(367, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(285, 13);
@@ -557,7 +570,7 @@
             this.txtMidname.Location = new System.Drawing.Point(658, 58);
             this.txtMidname.Name = "txtMidname";
             this.txtMidname.Size = new System.Drawing.Size(71, 25);
-            this.txtMidname.TabIndex = 4;
+            this.txtMidname.TabIndex = 2;
             this.txtMidname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMidname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMidname_KeyPress);
             // 
@@ -567,7 +580,7 @@
             this.txtFirstname.Location = new System.Drawing.Point(367, 58);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(285, 25);
-            this.txtFirstname.TabIndex = 3;
+            this.txtFirstname.TabIndex = 1;
             this.txtFirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstname_KeyPress);
             // 
@@ -577,13 +590,14 @@
             this.txtLastname.Location = new System.Drawing.Point(74, 58);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(287, 25);
-            this.txtLastname.TabIndex = 2;
+            this.txtLastname.TabIndex = 0;
             this.txtLastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastname_KeyPress);
             // 
             // grbExam
             // 
             this.grbExam.BackColor = System.Drawing.Color.YellowGreen;
+            this.grbExam.Controls.Add(this.btnPriceCheck);
             this.grbExam.Controls.Add(this.chkUltrasound);
             this.grbExam.Controls.Add(this.chkXray);
             this.grbExam.Controls.Add(this.chkDrugTest);
@@ -624,7 +638,7 @@
             this.chkUltrasound.Location = new System.Drawing.Point(244, 163);
             this.chkUltrasound.Name = "chkUltrasound";
             this.chkUltrasound.Size = new System.Drawing.Size(109, 25);
-            this.chkUltrasound.TabIndex = 20;
+            this.chkUltrasound.TabIndex = 42;
             this.chkUltrasound.Text = "Ultrasound";
             this.chkUltrasound.UseVisualStyleBackColor = true;
             this.chkUltrasound.CheckedChanged += new System.EventHandler(this.chkUltrasound_CheckedChanged);
@@ -636,7 +650,7 @@
             this.chkXray.Location = new System.Drawing.Point(244, 19);
             this.chkXray.Name = "chkXray";
             this.chkXray.Size = new System.Drawing.Size(71, 25);
-            this.chkXray.TabIndex = 22;
+            this.chkXray.TabIndex = 33;
             this.chkXray.Text = "X-Ray";
             this.chkXray.UseVisualStyleBackColor = true;
             this.chkXray.CheckedChanged += new System.EventHandler(this.chkXray_CheckedChanged);
@@ -648,16 +662,17 @@
             this.chkDrugTest.Location = new System.Drawing.Point(142, 208);
             this.chkDrugTest.Name = "chkDrugTest";
             this.chkDrugTest.Size = new System.Drawing.Size(100, 25);
-            this.chkDrugTest.TabIndex = 21;
+            this.chkDrugTest.TabIndex = 32;
             this.chkDrugTest.Text = "Drug Test";
             this.chkDrugTest.UseVisualStyleBackColor = true;
+            this.chkDrugTest.CheckedChanged += new System.EventHandler(this.chkDrugTest_CheckedChanged);
             // 
             // grbPrint
             // 
             this.grbPrint.Controls.Add(this.btnPrint);
-            this.grbPrint.Controls.Add(this.label26);
-            this.grbPrint.Controls.Add(this.label25);
-            this.grbPrint.Controls.Add(this.label24);
+            this.grbPrint.Controls.Add(this.lblGrossTotal);
+            this.grbPrint.Controls.Add(this.lblDiscount);
+            this.grbPrint.Controls.Add(this.lblNetTotal);
             this.grbPrint.Controls.Add(this.label23);
             this.grbPrint.Controls.Add(this.label22);
             this.grbPrint.Controls.Add(this.label21);
@@ -680,37 +695,37 @@
             this.btnPrint.Location = new System.Drawing.Point(107, 145);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(134, 35);
-            this.btnPrint.TabIndex = 31;
+            this.btnPrint.TabIndex = 53;
             this.btnPrint.Text = "Print Receipt";
             this.btnPrint.UseVisualStyleBackColor = true;
             // 
-            // label26
+            // lblGrossTotal
             // 
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(97, 116);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(170, 25);
-            this.label26.TabIndex = 30;
-            this.label26.Text = "0.00";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblGrossTotal.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrossTotal.Location = new System.Drawing.Point(97, 116);
+            this.lblGrossTotal.Name = "lblGrossTotal";
+            this.lblGrossTotal.Size = new System.Drawing.Size(170, 25);
+            this.lblGrossTotal.TabIndex = 30;
+            this.lblGrossTotal.Text = "0.00";
+            this.lblGrossTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label25
+            // lblDiscount
             // 
-            this.label25.Location = new System.Drawing.Point(144, 82);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(145, 17);
-            this.label25.TabIndex = 29;
-            this.label25.Text = "0.00";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDiscount.Location = new System.Drawing.Point(144, 82);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(145, 17);
+            this.lblDiscount.TabIndex = 29;
+            this.lblDiscount.Text = "- 0.00";
+            this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label24
+            // lblNetTotal
             // 
-            this.label24.Location = new System.Drawing.Point(147, 59);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(142, 17);
-            this.label24.TabIndex = 28;
-            this.label24.Text = "0.00";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblNetTotal.Location = new System.Drawing.Point(147, 59);
+            this.lblNetTotal.Name = "lblNetTotal";
+            this.lblNetTotal.Size = new System.Drawing.Size(142, 17);
+            this.lblNetTotal.TabIndex = 28;
+            this.lblNetTotal.Text = "0.00";
+            this.lblNetTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label23
             // 
@@ -773,13 +788,14 @@
             this.cboDiscount.FormattingEnabled = true;
             this.cboDiscount.Items.AddRange(new object[] {
             "None",
-            "Senior Citizen",
-            "Special Discount",
-            "Relatives Incorporated"});
+            "Senior Citizen (20%)",
+            "Special Discount (10%)",
+            "Relatives Incorporated (50%)"});
             this.cboDiscount.Location = new System.Drawing.Point(123, 21);
             this.cboDiscount.Name = "cboDiscount";
             this.cboDiscount.Size = new System.Drawing.Size(201, 25);
-            this.cboDiscount.TabIndex = 20;
+            this.cboDiscount.TabIndex = 52;
+            this.cboDiscount.SelectedIndexChanged += new System.EventHandler(this.cboDiscount_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -815,9 +831,9 @@
             this.chkHbsag.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkHbsag.Location = new System.Drawing.Point(142, 50);
             this.chkHbsag.Name = "chkHbsag";
-            this.chkHbsag.Size = new System.Drawing.Size(76, 25);
-            this.chkHbsag.TabIndex = 18;
-            this.chkHbsag.Text = "Hbsag";
+            this.chkHbsag.Size = new System.Drawing.Size(82, 25);
+            this.chkHbsag.TabIndex = 26;
+            this.chkHbsag.Text = "HBSAG";
             this.chkHbsag.UseVisualStyleBackColor = true;
             this.chkHbsag.CheckedChanged += new System.EventHandler(this.chkHbsag_CheckedChanged);
             // 
@@ -828,7 +844,7 @@
             this.chkPotassium.Location = new System.Drawing.Point(142, 126);
             this.chkPotassium.Name = "chkPotassium";
             this.chkPotassium.Size = new System.Drawing.Size(39, 25);
-            this.chkPotassium.TabIndex = 17;
+            this.chkPotassium.TabIndex = 29;
             this.chkPotassium.Text = "K";
             this.chkPotassium.UseVisualStyleBackColor = true;
             this.chkPotassium.CheckedChanged += new System.EventHandler(this.chkPotassium_CheckedChanged);
@@ -840,7 +856,7 @@
             this.chkSodium.Location = new System.Drawing.Point(142, 152);
             this.chkSodium.Name = "chkSodium";
             this.chkSodium.Size = new System.Drawing.Size(49, 25);
-            this.chkSodium.TabIndex = 16;
+            this.chkSodium.TabIndex = 30;
             this.chkSodium.Text = "Na";
             this.chkSodium.UseVisualStyleBackColor = true;
             this.chkSodium.CheckedChanged += new System.EventHandler(this.chkSodium_CheckedChanged);
@@ -852,10 +868,10 @@
             this.chkHBA1C.Location = new System.Drawing.Point(142, 24);
             this.chkHBA1C.Name = "chkHBA1C";
             this.chkHBA1C.Size = new System.Drawing.Size(81, 25);
-            this.chkHBA1C.TabIndex = 15;
+            this.chkHBA1C.TabIndex = 25;
             this.chkHBA1C.Text = "HBA1C";
             this.chkHBA1C.UseVisualStyleBackColor = true;
-            this.chkHBA1C.CheckedChanged += new System.EventHandler(this.chkHBAIC_CheckedChanged);
+            this.chkHBA1C.CheckedChanged += new System.EventHandler(this.chkHBA1C_CheckedChanged);
             // 
             // chkFecalysis
             // 
@@ -864,7 +880,7 @@
             this.chkFecalysis.Location = new System.Drawing.Point(142, 181);
             this.chkFecalysis.Name = "chkFecalysis";
             this.chkFecalysis.Size = new System.Drawing.Size(92, 25);
-            this.chkFecalysis.TabIndex = 14;
+            this.chkFecalysis.TabIndex = 31;
             this.chkFecalysis.Text = "Fecalysis";
             this.chkFecalysis.UseVisualStyleBackColor = true;
             this.chkFecalysis.CheckedChanged += new System.EventHandler(this.chkFecalysis_CheckedChanged);
@@ -876,7 +892,7 @@
             this.chk2hrPPBS.Location = new System.Drawing.Point(13, 320);
             this.chk2hrPPBS.Name = "chk2hrPPBS";
             this.chk2hrPPBS.Size = new System.Drawing.Size(100, 25);
-            this.chk2hrPPBS.TabIndex = 13;
+            this.chk2hrPPBS.TabIndex = 24;
             this.chk2hrPPBS.Text = "2-hr PPBS";
             this.chk2hrPPBS.UseVisualStyleBackColor = true;
             this.chk2hrPPBS.CheckedChanged += new System.EventHandler(this.chk2hrPPBS_CheckedChanged);
@@ -888,7 +904,7 @@
             this.chkUrinalysis.Location = new System.Drawing.Point(13, 291);
             this.chkUrinalysis.Name = "chkUrinalysis";
             this.chkUrinalysis.Size = new System.Drawing.Size(97, 25);
-            this.chkUrinalysis.TabIndex = 12;
+            this.chkUrinalysis.TabIndex = 23;
             this.chkUrinalysis.Text = "Urinalysis";
             this.chkUrinalysis.UseVisualStyleBackColor = true;
             this.chkUrinalysis.CheckedChanged += new System.EventHandler(this.chkUrinalysis_CheckedChanged);
@@ -900,7 +916,7 @@
             this.chkPlatelet.Location = new System.Drawing.Point(142, 101);
             this.chkPlatelet.Name = "chkPlatelet";
             this.chkPlatelet.Size = new System.Drawing.Size(84, 25);
-            this.chkPlatelet.TabIndex = 11;
+            this.chkPlatelet.TabIndex = 28;
             this.chkPlatelet.Text = "Platelet";
             this.chkPlatelet.UseVisualStyleBackColor = true;
             this.chkPlatelet.CheckedChanged += new System.EventHandler(this.chkPlatelet_CheckedChanged);
@@ -912,7 +928,7 @@
             this.chkCBC.Location = new System.Drawing.Point(142, 75);
             this.chkCBC.Name = "chkCBC";
             this.chkCBC.Size = new System.Drawing.Size(59, 25);
-            this.chkCBC.TabIndex = 10;
+            this.chkCBC.TabIndex = 27;
             this.chkCBC.Text = "CBC";
             this.chkCBC.UseVisualStyleBackColor = true;
             this.chkCBC.CheckedChanged += new System.EventHandler(this.chkCBC_CheckedChanged);
@@ -924,7 +940,7 @@
             this.chkECG.Location = new System.Drawing.Point(13, 266);
             this.chkECG.Name = "chkECG";
             this.chkECG.Size = new System.Drawing.Size(58, 25);
-            this.chkECG.TabIndex = 9;
+            this.chkECG.TabIndex = 22;
             this.chkECG.Text = "ECG";
             this.chkECG.UseVisualStyleBackColor = true;
             this.chkECG.CheckedChanged += new System.EventHandler(this.chkECG_CheckedChanged);
@@ -936,7 +952,7 @@
             this.chkSgot.Location = new System.Drawing.Point(13, 237);
             this.chkSgot.Name = "chkSgot";
             this.chkSgot.Size = new System.Drawing.Size(70, 25);
-            this.chkSgot.TabIndex = 8;
+            this.chkSgot.TabIndex = 21;
             this.chkSgot.Text = "SGOT";
             this.chkSgot.UseVisualStyleBackColor = true;
             this.chkSgot.CheckedChanged += new System.EventHandler(this.chkSgot_CheckedChanged);
@@ -948,7 +964,7 @@
             this.chkSgpt.Location = new System.Drawing.Point(13, 208);
             this.chkSgpt.Name = "chkSgpt";
             this.chkSgpt.Size = new System.Drawing.Size(67, 25);
-            this.chkSgpt.TabIndex = 7;
+            this.chkSgpt.TabIndex = 20;
             this.chkSgpt.Text = "SGPT";
             this.chkSgpt.UseVisualStyleBackColor = true;
             this.chkSgpt.CheckedChanged += new System.EventHandler(this.chkSgpt_CheckedChanged);
@@ -960,7 +976,7 @@
             this.chkHDL.Location = new System.Drawing.Point(13, 181);
             this.chkHDL.Name = "chkHDL";
             this.chkHDL.Size = new System.Drawing.Size(94, 25);
-            this.chkHDL.TabIndex = 6;
+            this.chkHDL.TabIndex = 19;
             this.chkHDL.Text = "HDL/LDL";
             this.chkHDL.UseVisualStyleBackColor = true;
             this.chkHDL.CheckedChanged += new System.EventHandler(this.chkHDL_CheckedChanged);
@@ -972,7 +988,7 @@
             this.chkTrigly.Location = new System.Drawing.Point(13, 152);
             this.chkTrigly.Name = "chkTrigly";
             this.chkTrigly.Size = new System.Drawing.Size(123, 25);
-            this.chkTrigly.TabIndex = 5;
+            this.chkTrigly.TabIndex = 18;
             this.chkTrigly.Text = "Triglycerides";
             this.chkTrigly.UseVisualStyleBackColor = true;
             this.chkTrigly.CheckedChanged += new System.EventHandler(this.chkTrigly_CheckedChanged);
@@ -984,7 +1000,7 @@
             this.chkChole.Location = new System.Drawing.Point(13, 126);
             this.chkChole.Name = "chkChole";
             this.chkChole.Size = new System.Drawing.Size(113, 25);
-            this.chkChole.TabIndex = 4;
+            this.chkChole.TabIndex = 17;
             this.chkChole.Text = "Cholesterol";
             this.chkChole.UseVisualStyleBackColor = true;
             this.chkChole.CheckedChanged += new System.EventHandler(this.chkChole_CheckedChanged);
@@ -996,7 +1012,7 @@
             this.chkUric.Location = new System.Drawing.Point(13, 101);
             this.chkUric.Name = "chkUric";
             this.chkUric.Size = new System.Drawing.Size(95, 25);
-            this.chkUric.TabIndex = 3;
+            this.chkUric.TabIndex = 16;
             this.chkUric.Text = "Uric Acid";
             this.chkUric.UseVisualStyleBackColor = true;
             this.chkUric.CheckedChanged += new System.EventHandler(this.chkUric_CheckedChanged);
@@ -1008,7 +1024,7 @@
             this.chkCreatinine.Location = new System.Drawing.Point(13, 75);
             this.chkCreatinine.Name = "chkCreatinine";
             this.chkCreatinine.Size = new System.Drawing.Size(103, 25);
-            this.chkCreatinine.TabIndex = 2;
+            this.chkCreatinine.TabIndex = 15;
             this.chkCreatinine.Text = "Creatinine";
             this.chkCreatinine.UseVisualStyleBackColor = true;
             this.chkCreatinine.CheckedChanged += new System.EventHandler(this.chkCreatinine_CheckedChanged);
@@ -1020,7 +1036,7 @@
             this.chkBUN.Location = new System.Drawing.Point(13, 50);
             this.chkBUN.Name = "chkBUN";
             this.chkBUN.Size = new System.Drawing.Size(62, 25);
-            this.chkBUN.TabIndex = 1;
+            this.chkBUN.TabIndex = 14;
             this.chkBUN.Text = "BUN";
             this.chkBUN.UseVisualStyleBackColor = true;
             this.chkBUN.CheckedChanged += new System.EventHandler(this.chkBUN_CheckedChanged);
@@ -1032,7 +1048,7 @@
             this.chkFBS.Location = new System.Drawing.Point(13, 24);
             this.chkFBS.Name = "chkFBS";
             this.chkFBS.Size = new System.Drawing.Size(56, 25);
-            this.chkFBS.TabIndex = 0;
+            this.chkFBS.TabIndex = 13;
             this.chkFBS.Text = "FBS";
             this.chkFBS.UseVisualStyleBackColor = true;
             this.chkFBS.CheckedChanged += new System.EventHandler(this.chkFBS_CheckedChanged);
@@ -1061,9 +1077,10 @@
             this.chkXray8.Location = new System.Drawing.Point(144, 102);
             this.chkXray8.Name = "chkXray8";
             this.chkXray8.Size = new System.Drawing.Size(91, 25);
-            this.chkXray8.TabIndex = 32;
+            this.chkXray8.TabIndex = 41;
             this.chkXray8.Text = "CXR APL";
             this.chkXray8.UseVisualStyleBackColor = true;
+            this.chkXray8.CheckedChanged += new System.EventHandler(this.chkXray8_CheckedChanged);
             // 
             // chkXray7
             // 
@@ -1072,9 +1089,10 @@
             this.chkXray7.Location = new System.Drawing.Point(144, 77);
             this.chkXray7.Name = "chkXray7";
             this.chkXray7.Size = new System.Drawing.Size(83, 25);
-            this.chkXray7.TabIndex = 31;
+            this.chkXray7.TabIndex = 40;
             this.chkXray7.Text = "CXR PA";
             this.chkXray7.UseVisualStyleBackColor = true;
+            this.chkXray7.CheckedChanged += new System.EventHandler(this.chkXray7_CheckedChanged);
             // 
             // chkXray6
             // 
@@ -1083,9 +1101,10 @@
             this.chkXray6.Location = new System.Drawing.Point(144, 51);
             this.chkXray6.Name = "chkXray6";
             this.chkXray6.Size = new System.Drawing.Size(59, 25);
-            this.chkXray6.TabIndex = 30;
+            this.chkXray6.TabIndex = 39;
             this.chkXray6.Text = "PNS";
             this.chkXray6.UseVisualStyleBackColor = true;
+            this.chkXray6.CheckedChanged += new System.EventHandler(this.chkXray6_CheckedChanged);
             // 
             // chkXray5
             // 
@@ -1094,9 +1113,10 @@
             this.chkXray5.Location = new System.Drawing.Point(144, 26);
             this.chkXray5.Name = "chkXray5";
             this.chkXray5.Size = new System.Drawing.Size(63, 25);
-            this.chkXray5.TabIndex = 29;
+            this.chkXray5.TabIndex = 38;
             this.chkXray5.Text = "Skull";
             this.chkXray5.UseVisualStyleBackColor = true;
+            this.chkXray5.CheckedChanged += new System.EventHandler(this.chkXray5_CheckedChanged);
             // 
             // chkXray4
             // 
@@ -1105,9 +1125,10 @@
             this.chkXray4.Location = new System.Drawing.Point(6, 102);
             this.chkXray4.Name = "chkXray4";
             this.chkXray4.Size = new System.Drawing.Size(95, 25);
-            this.chkXray4.TabIndex = 28;
+            this.chkXray4.TabIndex = 37;
             this.chkXray4.Text = "Shoulder";
             this.chkXray4.UseVisualStyleBackColor = true;
+            this.chkXray4.CheckedChanged += new System.EventHandler(this.chkXray4_CheckedChanged);
             // 
             // chkXray3
             // 
@@ -1116,9 +1137,10 @@
             this.chkXray3.Location = new System.Drawing.Point(6, 77);
             this.chkXray3.Name = "chkXray3";
             this.chkXray3.Size = new System.Drawing.Size(131, 25);
-            this.chkXray3.TabIndex = 27;
+            this.chkXray3.TabIndex = 36;
             this.chkXray3.Text = "Cervical Spine";
             this.chkXray3.UseVisualStyleBackColor = true;
+            this.chkXray3.CheckedChanged += new System.EventHandler(this.chkXray3_CheckedChanged);
             // 
             // chkXray2
             // 
@@ -1127,9 +1149,10 @@
             this.chkXray2.Location = new System.Drawing.Point(6, 51);
             this.chkXray2.Name = "chkXray2";
             this.chkXray2.Size = new System.Drawing.Size(110, 25);
-            this.chkXray2.TabIndex = 26;
+            this.chkXray2.TabIndex = 35;
             this.chkXray2.Text = "Extremities";
             this.chkXray2.UseVisualStyleBackColor = true;
+            this.chkXray2.CheckedChanged += new System.EventHandler(this.chkXray2_CheckedChanged);
             // 
             // chkXray1
             // 
@@ -1138,9 +1161,10 @@
             this.chkXray1.Location = new System.Drawing.Point(6, 26);
             this.chkXray1.Name = "chkXray1";
             this.chkXray1.Size = new System.Drawing.Size(136, 25);
-            this.chkXray1.TabIndex = 25;
+            this.chkXray1.TabIndex = 34;
             this.chkXray1.Text = "Thoracic Spine";
             this.chkXray1.UseVisualStyleBackColor = true;
+            this.chkXray1.CheckedChanged += new System.EventHandler(this.chkXray1_CheckedChanged);
             // 
             // grbUltrasound
             // 
@@ -1166,9 +1190,10 @@
             this.chkUltrasound8.Location = new System.Drawing.Point(144, 95);
             this.chkUltrasound8.Name = "chkUltrasound8";
             this.chkUltrasound8.Size = new System.Drawing.Size(75, 25);
-            this.chkUltrasound8.TabIndex = 40;
+            this.chkUltrasound8.TabIndex = 51;
             this.chkUltrasound8.Text = "Breast";
             this.chkUltrasound8.UseVisualStyleBackColor = true;
+            this.chkUltrasound8.CheckedChanged += new System.EventHandler(this.chkUltrasound8_CheckedChanged);
             // 
             // chkUltrasound7
             // 
@@ -1177,9 +1202,10 @@
             this.chkUltrasound7.Location = new System.Drawing.Point(144, 71);
             this.chkUltrasound7.Name = "chkUltrasound7";
             this.chkUltrasound7.Size = new System.Drawing.Size(85, 25);
-            this.chkUltrasound7.TabIndex = 39;
+            this.chkUltrasound7.TabIndex = 50;
             this.chkUltrasound7.Text = "Thyroid";
             this.chkUltrasound7.UseVisualStyleBackColor = true;
+            this.chkUltrasound7.CheckedChanged += new System.EventHandler(this.chkUltrasound7_CheckedChanged);
             // 
             // chkUltrasound6
             // 
@@ -1188,9 +1214,10 @@
             this.chkUltrasound6.Location = new System.Drawing.Point(144, 47);
             this.chkUltrasound6.Name = "chkUltrasound6";
             this.chkUltrasound6.Size = new System.Drawing.Size(71, 25);
-            this.chkUltrasound6.TabIndex = 38;
+            this.chkUltrasound6.TabIndex = 49;
             this.chkUltrasound6.Text = "Pelvic";
             this.chkUltrasound6.UseVisualStyleBackColor = true;
+            this.chkUltrasound6.CheckedChanged += new System.EventHandler(this.chkUltrasound6_CheckedChanged);
             // 
             // chkUltrasound5
             // 
@@ -1199,9 +1226,10 @@
             this.chkUltrasound5.Location = new System.Drawing.Point(144, 23);
             this.chkUltrasound5.Name = "chkUltrasound5";
             this.chkUltrasound5.Size = new System.Drawing.Size(60, 25);
-            this.chkUltrasound5.TabIndex = 37;
+            this.chkUltrasound5.TabIndex = 48;
             this.chkUltrasound5.Text = "KUB";
             this.chkUltrasound5.UseVisualStyleBackColor = true;
+            this.chkUltrasound5.CheckedChanged += new System.EventHandler(this.chkUltrasound5_CheckedChanged);
             // 
             // chkUltrasound4
             // 
@@ -1210,9 +1238,10 @@
             this.chkUltrasound4.Location = new System.Drawing.Point(6, 95);
             this.chkUltrasound4.Name = "chkUltrasound4";
             this.chkUltrasound4.Size = new System.Drawing.Size(60, 25);
-            this.chkUltrasound4.TabIndex = 36;
+            this.chkUltrasound4.TabIndex = 47;
             this.chkUltrasound4.Text = "HBT";
             this.chkUltrasound4.UseVisualStyleBackColor = true;
+            this.chkUltrasound4.CheckedChanged += new System.EventHandler(this.chkUltrasound4_CheckedChanged);
             // 
             // chkUltrasound3
             // 
@@ -1221,9 +1250,10 @@
             this.chkUltrasound3.Location = new System.Drawing.Point(6, 71);
             this.chkUltrasound3.Name = "chkUltrasound3";
             this.chkUltrasound3.Size = new System.Drawing.Size(109, 25);
-            this.chkUltrasound3.TabIndex = 35;
+            this.chkUltrasound3.TabIndex = 46;
             this.chkUltrasound3.Text = "Lower Abd";
             this.chkUltrasound3.UseVisualStyleBackColor = true;
+            this.chkUltrasound3.CheckedChanged += new System.EventHandler(this.chkUltrasound3_CheckedChanged);
             // 
             // chkUltrasound2
             // 
@@ -1232,9 +1262,10 @@
             this.chkUltrasound2.Location = new System.Drawing.Point(6, 47);
             this.chkUltrasound2.Name = "chkUltrasound2";
             this.chkUltrasound2.Size = new System.Drawing.Size(110, 25);
-            this.chkUltrasound2.TabIndex = 34;
+            this.chkUltrasound2.TabIndex = 44;
             this.chkUltrasound2.Text = "Upper Abd";
             this.chkUltrasound2.UseVisualStyleBackColor = true;
+            this.chkUltrasound2.CheckedChanged += new System.EventHandler(this.chkUltrasound2_CheckedChanged);
             // 
             // chkUltrasound1
             // 
@@ -1243,9 +1274,20 @@
             this.chkUltrasound1.Location = new System.Drawing.Point(6, 23);
             this.chkUltrasound1.Name = "chkUltrasound1";
             this.chkUltrasound1.Size = new System.Drawing.Size(111, 25);
-            this.chkUltrasound1.TabIndex = 33;
+            this.chkUltrasound1.TabIndex = 43;
             this.chkUltrasound1.Text = "Whole Abd";
             this.chkUltrasound1.UseVisualStyleBackColor = true;
+            this.chkUltrasound1.CheckedChanged += new System.EventHandler(this.chkUltrasound1_CheckedChanged);
+            // 
+            // btnPriceCheck
+            // 
+            this.btnPriceCheck.Location = new System.Drawing.Point(684, 123);
+            this.btnPriceCheck.Name = "btnPriceCheck";
+            this.btnPriceCheck.Size = new System.Drawing.Size(134, 30);
+            this.btnPriceCheck.TabIndex = 100;
+            this.btnPriceCheck.Text = "Check Service Fee";
+            this.btnPriceCheck.UseVisualStyleBackColor = true;
+            this.btnPriceCheck.Click += new System.EventHandler(this.btnPriceCheck_Click);
             // 
             // frmAddPatient
             // 
@@ -1313,9 +1355,9 @@
         private System.Windows.Forms.ComboBox cboCity;
         private System.Windows.Forms.ComboBox cboProvince;
         private System.Windows.Forms.GroupBox grbPrint;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblGrossTotal;
+        private System.Windows.Forms.Label lblDiscount;
+        private System.Windows.Forms.Label lblNetTotal;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
@@ -1368,5 +1410,6 @@
         private System.Windows.Forms.CheckBox chkUltrasound3;
         private System.Windows.Forms.CheckBox chkUltrasound2;
         private System.Windows.Forms.CheckBox chkUltrasound1;
+        private System.Windows.Forms.Button btnPriceCheck;
     }
 }
