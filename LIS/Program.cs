@@ -12,7 +12,7 @@ namespace LIS
         [STAThread]
         static void Main()
         {
-            //For Creating only one instance of the program
+            //For assuring that only one instance of the program
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             using (Mutex mutex = new Mutex(false, "Global\\" + appGuid))

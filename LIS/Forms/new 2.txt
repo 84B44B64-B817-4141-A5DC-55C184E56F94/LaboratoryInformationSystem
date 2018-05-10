@@ -1,0 +1,40 @@
+Prices
+
+FBS 80
+BUN 90
+Crea 90
+Uric 90
+Chole 90
+Trigly 200
+HDL 300
+SGPT 280
+SGOL 280
+ECG 200
+Urinalysis 40
+PPBS 80
+HBA1C 750
+HBSAG 250
+CBC 100
+Platelet 100
+K 250
+Na 250
+Feca 60
+Drug Test 300
+Xray
+	Thoracic Spine 600
+	Extremeties 200
+	Cervical 400
+	Shoulder 300
+	Skull 350
+	PNS 350
+	CXR-PA 300
+	CXR-APL 300
+Ultrasound
+	Whole 1600
+	Upper 1000
+	Lower 1000
+	HBT 1000
+	KUB 600
+	Pelvic 400
+	Thryoid 600
+	Breast 600
