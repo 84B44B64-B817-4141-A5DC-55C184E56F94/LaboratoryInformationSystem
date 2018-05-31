@@ -13,6 +13,9 @@ namespace LIS
 {
     public partial class frmAddPatient : Form
     {
+
+        string _username;
+        string _usertype;
         Thread loadCity;
         string[] cityArray;
         int arrayReference, arrayCounter = 0;
@@ -32,6 +35,8 @@ namespace LIS
             cboProvince.SelectedIndex = -1;
             cboCity.SelectedIndex = -1;
             cboDiscount.SelectedIndex = 0;
+            _username = lbl_username.Text;
+            _usertype = lbl_usertype.Text;
         }
 
         private void dtpBirthday_ValueChanged(object sender, EventArgs e)
@@ -3885,6 +3890,11 @@ namespace LIS
         {
             frmFeeList list = new frmFeeList();
             list.ShowDialog();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
         }
 
         //For loading the cities/municipalities on selected province

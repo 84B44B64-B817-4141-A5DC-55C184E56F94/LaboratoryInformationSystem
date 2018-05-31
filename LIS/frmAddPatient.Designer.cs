@@ -63,6 +63,7 @@
             this.txtFirstname = new System.Windows.Forms.TextBox();
             this.txtLastname = new System.Windows.Forms.TextBox();
             this.grbExam = new System.Windows.Forms.GroupBox();
+            this.btnPriceCheck = new System.Windows.Forms.Button();
             this.chkUltrasound = new System.Windows.Forms.CheckBox();
             this.chkXray = new System.Windows.Forms.CheckBox();
             this.chkDrugTest = new System.Windows.Forms.CheckBox();
@@ -118,7 +119,8 @@
             this.chkUltrasound3 = new System.Windows.Forms.CheckBox();
             this.chkUltrasound2 = new System.Windows.Forms.CheckBox();
             this.chkUltrasound1 = new System.Windows.Forms.CheckBox();
-            this.btnPriceCheck = new System.Windows.Forms.Button();
+            this.lbl_usertype = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.grbExam.SuspendLayout();
             this.grbPrint.SuspendLayout();
@@ -518,6 +520,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Maroon;
             this.label6.Location = new System.Drawing.Point(6, 33);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 17);
@@ -631,6 +634,16 @@
             this.grbExam.TabStop = false;
             this.grbExam.Text = "Examination Details";
             // 
+            // btnPriceCheck
+            // 
+            this.btnPriceCheck.Location = new System.Drawing.Point(684, 123);
+            this.btnPriceCheck.Name = "btnPriceCheck";
+            this.btnPriceCheck.Size = new System.Drawing.Size(134, 30);
+            this.btnPriceCheck.TabIndex = 100;
+            this.btnPriceCheck.Text = "Check Service Fee";
+            this.btnPriceCheck.UseVisualStyleBackColor = true;
+            this.btnPriceCheck.Click += new System.EventHandler(this.btnPriceCheck_Click);
+            // 
             // chkUltrasound
             // 
             this.chkUltrasound.AutoSize = true;
@@ -696,8 +709,9 @@
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(134, 35);
             this.btnPrint.TabIndex = 53;
-            this.btnPrint.Text = "Print Receipt";
+            this.btnPrint.Text = "Create Receipt";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // lblGrossTotal
             // 
@@ -1279,15 +1293,25 @@
             this.chkUltrasound1.UseVisualStyleBackColor = true;
             this.chkUltrasound1.CheckedChanged += new System.EventHandler(this.chkUltrasound1_CheckedChanged);
             // 
-            // btnPriceCheck
+            // lbl_usertype
             // 
-            this.btnPriceCheck.Location = new System.Drawing.Point(684, 123);
-            this.btnPriceCheck.Name = "btnPriceCheck";
-            this.btnPriceCheck.Size = new System.Drawing.Size(134, 30);
-            this.btnPriceCheck.TabIndex = 100;
-            this.btnPriceCheck.Text = "Check Service Fee";
-            this.btnPriceCheck.UseVisualStyleBackColor = true;
-            this.btnPriceCheck.Click += new System.EventHandler(this.btnPriceCheck_Click);
+            this.lbl_usertype.AutoSize = true;
+            this.lbl_usertype.Location = new System.Drawing.Point(809, 5);
+            this.lbl_usertype.Name = "lbl_usertype";
+            this.lbl_usertype.Size = new System.Drawing.Size(28, 12);
+            this.lbl_usertype.TabIndex = 102;
+            this.lbl_usertype.Text = "temp";
+            this.lbl_usertype.Visible = false;
+            // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Location = new System.Drawing.Point(755, 5);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(28, 12);
+            this.lbl_username.TabIndex = 101;
+            this.lbl_username.Text = "temp";
+            this.lbl_username.Visible = false;
             // 
             // frmAddPatient
             // 
@@ -1295,6 +1319,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(860, 681);
+            this.Controls.Add(this.lbl_usertype);
+            this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.grbExam);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1316,6 +1342,7 @@
             this.grbUltrasound.ResumeLayout(false);
             this.grbUltrasound.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1411,5 +1438,7 @@
         private System.Windows.Forms.CheckBox chkUltrasound2;
         private System.Windows.Forms.CheckBox chkUltrasound1;
         private System.Windows.Forms.Button btnPriceCheck;
+        public System.Windows.Forms.Label lbl_usertype;
+        public System.Windows.Forms.Label lbl_username;
     }
 }

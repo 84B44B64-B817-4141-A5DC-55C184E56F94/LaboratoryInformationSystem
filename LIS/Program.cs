@@ -12,7 +12,7 @@ namespace LIS
         [STAThread]
         static void Main()
         {
-            //For assuring that only one instance of the program
+            //For assuring that only one instance of the program is run
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             using (Mutex mutex = new Mutex(false, "Global\\" + appGuid))
@@ -114,3 +114,11 @@ namespace LIS
         }
     }
 }
+
+/*SYNTAX FOR MYSQL Queries and Commands
+ * SELECT = MySQLDatareader reader = Program.Query("SELECT * FROM TABLENAME WHERE COLUMN_NAME LIKE CRITERIA"); Always put reader.Close(); after usage!
+ * INSERT = Program.Query("INSERT INTO DATABASE_NAME.TABLE_NAME (COLUMN_NAME_1, COLUMN_NAME_2, etc) VALUE (VALUE_1, VALUE_2, etc)").Close();
+ * UPDATE = Program.Query("UPDATE DATABASE_NAME.TABLE_NAME SET COLUMN_NAME_1 = CRITERIA, COLUMN_NAME_2 = CRITERIA, etc WHERE COLUMN_NAME = CRITERIA").Close();
+ * DELETE = Program.Query("DELETE FROM DATABASE_NAME.TABLE_NAME WHERE COLUMN_NANE = CRITERIA").Close();
+ * EXECUTESCALR = Program.Count("SELECT COUNT(*) FROM DATABASE_NAME.TABLE_NAME");
+ */

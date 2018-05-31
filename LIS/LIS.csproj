@@ -91,6 +91,12 @@
     <Compile Include="frmAddPatient.Designer.cs">
       <DependentUpon>frmAddPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditPrice.Designer.cs">
+      <DependentUpon>frmEditPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFeeList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddPatient.resx">
       <DependentUpon>frmAddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditPrice.resx">
+      <DependentUpon>frmEditPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFeeList.resx">
       <DependentUpon>frmFeeList.cs</DependentUpon>

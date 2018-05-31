@@ -40,10 +40,12 @@
             this.databaseManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userAccountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valueThresholdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.priceListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditTrailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_username = new System.Windows.Forms.Label();
+            this.lbl_usertype = new System.Windows.Forms.Label();
             this.menMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,6 +113,7 @@
             this.databaseManagerToolStripMenuItem,
             this.userAccountsToolStripMenuItem,
             this.valueThresholdToolStripMenuItem,
+            this.priceListToolStripMenuItem,
             this.auditTrailToolStripMenuItem});
             this.tsmMaintenance.Name = "tsmMaintenance";
             this.tsmMaintenance.Size = new System.Drawing.Size(88, 19);
@@ -134,6 +137,13 @@
             this.valueThresholdToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.valueThresholdToolStripMenuItem.Text = "&Value Thresholds";
             // 
+            // priceListToolStripMenuItem
+            // 
+            this.priceListToolStripMenuItem.Name = "priceListToolStripMenuItem";
+            this.priceListToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.priceListToolStripMenuItem.Text = "&Price List";
+            this.priceListToolStripMenuItem.Click += new System.EventHandler(this.priceListToolStripMenuItem_Click);
+            // 
             // auditTrailToolStripMenuItem
             // 
             this.auditTrailToolStripMenuItem.Name = "auditTrailToolStripMenuItem";
@@ -151,19 +161,29 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.helpToolStripMenuItem.Text = "&About";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // lbl_username
             // 
             this.lbl_username.AutoSize = true;
-            this.lbl_username.Location = new System.Drawing.Point(730, 8);
+            this.lbl_username.Location = new System.Drawing.Point(778, 8);
             this.lbl_username.Name = "lbl_username";
             this.lbl_username.Size = new System.Drawing.Size(38, 17);
             this.lbl_username.TabIndex = 2;
             this.lbl_username.Text = "temp";
             this.lbl_username.Visible = false;
+            // 
+            // lbl_usertype
+            // 
+            this.lbl_usertype.AutoSize = true;
+            this.lbl_usertype.Location = new System.Drawing.Point(832, 8);
+            this.lbl_usertype.Name = "lbl_usertype";
+            this.lbl_usertype.Size = new System.Drawing.Size(38, 17);
+            this.lbl_usertype.TabIndex = 3;
+            this.lbl_usertype.Text = "temp";
+            this.lbl_usertype.Visible = false;
             // 
             // frmMain
             // 
@@ -171,6 +191,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(1284, 633);
+            this.Controls.Add(this.lbl_usertype);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.menMain);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,5 +227,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         public System.Windows.Forms.Label lbl_username;
+        private System.Windows.Forms.ToolStripMenuItem priceListToolStripMenuItem;
+        public System.Windows.Forms.Label lbl_usertype;
     }
 }

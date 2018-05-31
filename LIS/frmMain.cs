@@ -30,6 +30,8 @@ namespace LIS
                     if (MessageBox.Show("Open another patient form?","System",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
                     {
                         frmAddPatient add = new frmAddPatient();
+                        add.lbl_username.Text = _username;
+                        add.lbl_usertype.Text = _usertype;
                         add.Show();
                         return;
                     }
@@ -41,6 +43,8 @@ namespace LIS
                 }
             }
             frmAddPatient addd = new frmAddPatient();
+            addd.lbl_username.Text = _username;
+            addd.lbl_usertype.Text = _usertype;
             addd.Show();
         }
 
@@ -67,6 +71,7 @@ namespace LIS
                         break;
                     }
             }
+            lbl_usertype.Text = _usertype;
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -83,6 +88,14 @@ namespace LIS
         {
             int counter = Program.Count("Select Count( " + "BULACAN" + ") from lis.tbl_city");
             MessageBox.Show(counter.ToString());
+        }
+
+        private void priceListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditPrice edit = new frmEditPrice();
+            edit.lbl_username.Text = _username;
+            edit.lbl_usertype.Text = _usertype;
+            edit.ShowDialog();
         }
     }
 }

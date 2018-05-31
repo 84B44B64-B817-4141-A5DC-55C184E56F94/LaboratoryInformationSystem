@@ -22,7 +22,7 @@ Prices
 /Drug Test 300
 Xray
 	/Thoracic Spine 600
-	/Extremeties 200
+	/Extremities 200
 	/Cervical 400
 	/Shoulder 300
 	/Skull 350
